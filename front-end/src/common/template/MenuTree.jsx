@@ -1,14 +1,16 @@
 import React from 'react'
 
-export default props => (
+ const MenuTree = ({ icon, label, children }) => (
   <li className="treeview">
     <a href="#">
-      <i className={`fa fa-${props.icon}`} />
-      {props.label}
+      <i className={`fa fa-${icon}`} />
+      {label}
       <i className={`fa fa-angle-left pull-right`} />
     </a>
     <ul className="treeview-menu">
-      {props.children}
+      {children}
     </ul>
   </li>
 )
+
+export default MenuTree
